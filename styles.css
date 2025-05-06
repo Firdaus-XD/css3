@@ -1,0 +1,143 @@
+/* styles.css */
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+  }
+  
+  /* Mobile First - Outline above content */
+  .container {
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  .outline-sidebar {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  /* Medium screens (800-1000px) - Outline on right */
+  @media (min-width: 800px) {
+    body {
+      display: grid;
+      grid-template-columns: 1fr 250px;
+      gap: 20px;
+    }
+    
+    .outline-sidebar {
+      position: sticky;
+      top: 20px;
+      height: fit-content;
+      margin-bottom: 0;
+      order: 2; /* Moves to right side */
+    }
+    
+    .container {
+      order: 1;
+      padding: 25px;
+    }
+  }
+  
+  /* Large screens (>1000px) - Outline on left */
+  @media (min-width: 1000px) {
+    body {
+      grid-template-columns: 250px 1fr;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .outline-sidebar {
+      order: 1; /* Moves back to left side */
+    }
+    
+    .container {
+      order: 2;
+      padding: 30px;
+    }
+  }
+  
+  /* Outline styling */
+  .outline-title {
+    font-size: 1.2em;
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e0e0e0;
+    color: #4a6bff;
+  }
+  
+  .outline-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .outline-list li {
+    margin-bottom: 8px;
+  }
+  
+  .outline-list a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+  }
+  
+  .outline-list a:hover {
+    background-color: #e9ecef;
+    color: #0d6efd;
+  }
+  
+  .outline-list ul {
+    list-style: none;
+    padding-left: 15px;
+    margin-top: 5px;
+  }
+  
+  /* Content styling */
+  h1 {
+    color: #4a6bff;
+    text-align: center;
+    margin-top: 0;
+  }
+  
+  h2 {
+    color: #ff6b6b;
+    margin-top: 30px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #ff6b6b;
+  }
+  
+  h3 {
+    color: #4a6bff;
+    margin-top: 25px;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+  }
+  
+  blockquote {
+    background-color: #f0f5ff;
+    border-left: 4px solid #4a6bff;
+    padding: 15px;
+    margin: 20px 0;
+    font-style: italic;
+  }
